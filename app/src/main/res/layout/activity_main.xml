@@ -9,11 +9,12 @@
     tools:layout_editor_absoluteY="36dp">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#2196F3"
         android:text="@string/login"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintHorizontal_bias="0.497"
@@ -29,7 +30,7 @@
         app:layout_constraintGuide_percent="0.05882353" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_phone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -37,7 +38,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/userNameHint"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
@@ -45,7 +46,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edit_pwd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
