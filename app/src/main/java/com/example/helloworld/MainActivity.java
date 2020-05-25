@@ -12,8 +12,7 @@ import com.example.helloworld.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mBinding;
-    private String phone = "13380906674";
-    private String pwd = "123456";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +23,11 @@ public class MainActivity extends AppCompatActivity {
         mBinding.buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mBinding.editPhone.getText().toString().equals(phone) && mBinding.editPwd.getText().toString().equals(pwd)) {
+                String phone = mBinding.editPhone.getText().toString();
+                String pwd = mBinding.editPwd.getText().toString();
+                if (phone.equals("10086") && pwd.equals("123456")) {
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);//上下文，目标activity的类
+                    intent.putExtra("data_phone",phone);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "密码或者手机号错误", Toast.LENGTH_LONG).show();
