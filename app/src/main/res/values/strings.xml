@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">假支付宝</string>
+    <string name="test">牛逼</string>
+    <string name="shi">是</string>
+    <string name="Tests">测试</string>
+    <string name="logo_co" />
+    <string name="userNameHint">请输入用户名</string>
+    <string name="password">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="button">登录</string>
+    <string name="register">注册</string>
+    <string name="alipay" />
+    <string name="taobao_login">淘宝账户登录</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="nickname">昵称</string>
+    <string name="loginpassword">登录密码</string>
+    <string name="confrurmpassword">确认密码</string>
+    <string name="relation">手机号码/邮箱</string>
+    <string name="receptoon">接收信息推送</string>
+    <string name="consent">同意本软件的用户服务协议和隐私政策</string>
+    <string name="nine_tailed_fox">九尾妖狐</string>
+    <string name="ali">阿狸</string>
+    <string name="ap">法师</string>
+    <string name="assassin">刺客</string>
+    <string name="physics">物理攻击</string>
+    <string name="magic_arts">法术攻击</string>
+    <string name="defense">防御能力</string>
+    <string name="difficlty">上手难度</string>
+    <string name="kdaali">K/DA 阿狸</string>
+    <string name="button_left">左边</string>
+    <string name="button_right">右边</string>
+    <string name="hello_world">你好世界</string>
+    <string name="button_ok">确定</string>
+    <string name="button_switch">开关</string>
+    <string name="open">开</string>
+    <string name="close">关</string>
+    <string name="logo">安卓</string>
+    <string name="radio_apple">Apple</string>
+    <string name="radio_android">Android</string>
+    <string name="edit_number">输入数值</string>
+    <string name="Java">java</string>
+    <string name="java">Java</string>
+    <string name="sql">SQL</string>
+    <string name="please">请填写数值</string>
+    <string name="evaluate">星评价</string>
+
+
+</resources>
