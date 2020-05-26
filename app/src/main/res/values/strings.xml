@@ -45,6 +45,7 @@
     <string name="sql">SQL</string>
     <string name="please">请填写数值</string>
     <string name="evaluate">星评价</string>
+    <string name="sex">sex</string>
 
 
 </resources>

@@ -12,7 +12,7 @@
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".UI2Activity"></activity>
         <activity android:name=".UIActivity" />
-        <activity android:name=".AliActivity" />
+        <activity android:name=".AliActivity"></activity>
         <activity android:name=".DemoActivity" />
         <activity android:name=".CalculatorActivity" />
         <activity android:name=".RegisterActivity" />
