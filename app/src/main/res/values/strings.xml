@@ -4,7 +4,7 @@
     <string name="shi">是</string>
     <string name="Tests">测试</string>
     <string name="logo_co" />
-    <string name="userNameHint">请输入用户名</string>
+    <string name="userNameHint">请输入用户名，手机号</string>
     <string name="password">请输入密码</string>
     <string name="login">登录</string>
     <string name="button">登录</string>
