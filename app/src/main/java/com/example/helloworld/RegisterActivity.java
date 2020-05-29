@@ -3,6 +3,7 @@ package com.example.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowInsets;
@@ -48,7 +49,23 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (!protocol) {
                     toast = "请同意本软件的相关协议和策略";
                 } else {
-                    toast = "注册成功";
+                    //存储该用户的注册数据
+                    SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
+                    String temp = sp.getString("phone_" + phone, "0");
+                    if (!temp.equals("0")) {     //如果不是0，则手机号以被注册
+                        toast = "该用户已被注册";
+                    } else {
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putString("phone_" + phone, phone);
+                        editor.putString("name_" + phone, name);
+                        editor.putString("sex_" + phone, sex);
+                        editor.putString("pwd_" + phone, pwd);
+                        temp = (sms ? "1":"0");//判断是否接受消息推送
+                        editor.putString("sms_"+phone,temp);
+                        editor.apply();
+                        toast = "注册成功";
+                        //跳转登录页面
+                    }
                 }
                 Toast.makeText(RegisterActivity.this, toast, Toast.LENGTH_LONG).show();
             }
