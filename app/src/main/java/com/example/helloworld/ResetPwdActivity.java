@@ -15,8 +15,9 @@ import com.example.helloworld.databinding.ActivityResetPwdBinding;
  * @author LGC
  */
 public class ResetPwdActivity extends AppCompatActivity {
+    public static  String phone;
     private ActivityResetPwdBinding mBinding;
-    String phone, name, sex = "";
+    String  name, sex = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

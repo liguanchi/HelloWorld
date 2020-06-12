@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import com.example.helloworld.databinding.ActivityRegisterBinding;
 
+/**
+ * @author LGC
+ */
 public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding mBinding;
