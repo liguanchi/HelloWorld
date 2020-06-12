@@ -41,13 +41,16 @@ public class MainActivity extends AppCompatActivity {
                     String userName = sp.getString("name_" + phone, "0");
                     String userSex = sp.getString("sex_" + phone, "0");
                     String userSms = sp.getString("sms_" + phone, "0").equals("1") ? " 接受" : " 不接受";
-                    UserInfo u = new UserInfo(userName, pwd, userSex, phone, userSms);
-                    bundle.putSerializable("userInfo", u);
+                    //带有返回值的封装的activity的跳转
+                    //UserInfo u = new UserInfo(userName, pwd, userSex, phone, userSms);
+                    //bundle.putSerializable("userInfo", u);
 
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);//上下文，目标activity的类
-                    intent.putExtras(bundle);
-//                    startActivity(intent);
-                    startActivityForResult(intent, RESULT_CODE);
+                    //Intent intent = new Intent(MainActivity.this, HomeActivity.class);//上下文，目标activity的类
+                    //intent.putExtras(bundle);
+                    //startActivity(intent);
+                    //startActivityForResult(intent, RESULT_CODE);
+                    //自定义的activity跳转
+                    HomeActivity.actionStart(MainActivity.this,userName,pwd,userSex,phone,userSms,RESULT_CODE);
                 } else {
                     Toast.makeText(MainActivity.this, "密码或者手机号错误", Toast.LENGTH_LONG).show();
                 }
