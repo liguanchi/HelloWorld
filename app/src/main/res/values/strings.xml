@@ -49,6 +49,9 @@
     <string name="phone">手机号码</string>
     <string name="message">接收信息推送</string>
     <string name="welcome">欢迎使用</string>
+    <string name="alter_pwd">修改密码</string>
+    <string name="new_pwd">新密码</string>
+    <string name="user_name">用户名</string>
 
 
 </resources>

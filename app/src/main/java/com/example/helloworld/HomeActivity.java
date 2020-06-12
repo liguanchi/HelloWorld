@@ -43,23 +43,23 @@ public class HomeActivity extends AppCompatActivity {
         String temp = mBinding.userSms.getText().toString() + ":" + userSms;
         mBinding.userSms.setText(temp);
         //返回数据
-        intent.putExtra(EXIT_HOME,"您已退出账号");
-        setResult(RESULT_OK,intent);
+        intent.putExtra(EXIT_HOME, "您已退出账号");
+        setResult(RESULT_OK, intent);
     }
 
     /**
      * 对外提供公开的静态的启动本Activity的方法
-     * @param activity 启动方的上下文
-     * @param userName 用户昵称
-     * @param pwd  用户密码
-     * @param userSex 用户性别
-     * @param phone 用户手机号
-     * @param userSms 用户是否接受消息推送
+     *
+     * @param activity   启动方的上下文
+     * @param userName   用户昵称
+     * @param pwd        用户密码
+     * @param userSex    用户性别
+     * @param phone      用户手机号
+     * @param userSms    用户是否接受消息推送
      * @param resultCode 请求代码
      */
-    public static void actionStart(Activity activity,String userName,String pwd,String userSex,
-                                   String phone,String userSms,int resultCode)
-    {
+    public static void actionStart(Activity activity, String userName, String pwd, String userSex,
+                                   String phone, String userSms, int resultCode) {
         //上下文，目标activity的类
         Intent intent = new Intent(activity, HomeActivity.class);
         Bundle bundle = new Bundle();
