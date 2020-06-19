@@ -32,13 +32,13 @@ public class ResetPwdActivity extends AppCompatActivity {
                 name = mBinding.editUserName.getText().toString().trim();
 
                 String toast = null;
-                if (phone.equals("")) {
+                if ("".equals(phone)) {
                     toast = "请输入手机号";
-                } else if (name.equals("")) {
+                } else if ("".equals(name)) {
                     toast = "请输入用户名";
                 } else if (phone.length() != 11) {
                     toast = "请输入正确的手机号码";
-                } else if (sex.equals("")) {
+                } else if ("".equals(sex)) {
                     toast = "请选择性别";
                 } else {
                     SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
@@ -50,12 +50,14 @@ public class ResetPwdActivity extends AppCompatActivity {
                         toast = "很抱歉，信息不匹配，无法重置密码";
                     } else {
                         Intent intent = new Intent(ResetPwdActivity.this, UpdatePwdActivity.class);
-
+                        intent.putExtra("phone",phone);
                         startActivity(intent);
                         toast = "请输入新密码";
+                        finish();
                     }
                 }
                 Toast.makeText(ResetPwdActivity.this, toast, Toast.LENGTH_LONG).show();
+
             }
         });
 

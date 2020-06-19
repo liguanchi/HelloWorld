@@ -15,7 +15,7 @@ import com.example.helloworld.databinding.ActivityUpdatePwdBinding;
  */
 public class UpdatePwdActivity extends AppCompatActivity {
     private ActivityUpdatePwdBinding mBinding;
-    private String pwd,pwdOK,phone;
+    private String pwd, okPwd,phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +28,22 @@ public class UpdatePwdActivity extends AppCompatActivity {
             public void onClick(View v) {
                 phone = ResetPwdActivity.phone;
                 pwd = mBinding.editPwd.getText().toString();
-                pwdOK = mBinding.editPwdOk.getText().toString();
+                okPwd = mBinding.editPwdOk.getText().toString();
                 String toast;
-                if (pwd.equals("")){
+
+                SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
+                String error = "0";
+                String spPwd = sp.getString("pwd_"+phone,error);
+                if ("".equals(pwd) || "".equals(okPwd)){
                     toast = "密码不能为空";
                 }else if (pwd.length() != 6){
                     toast = "密码长度为6位";
-                }else if (!pwdOK.equals(pwd)){
+                }else if (!okPwd.equals(pwd)){
                     toast = "密码不一致";
+                }else if (pwd.equals(spPwd)){
+                    toast = "新密码不能时近期使用过的密码";
                 }else{
-                    SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sp.edit();
-                    editor.putString("pwd_"+phone,pwd);
-                    editor.apply();
-                    Intent intent = new Intent(UpdatePwdActivity.this, MainActivity.class);
-                    startActivity(intent);
+                    sp.edit().putString("pwd_"+phone,pwd).apply();
                     toast = "修改成功";
                     finish();
                 }
